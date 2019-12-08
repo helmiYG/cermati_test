@@ -1,0 +1,363 @@
+
+$blue: #007bc1;
+$dark-blue: #004a75;
+$orange: ​#ff8000;
+$dark-orange: #cc6600;
+$smoke-grey: #e5e5e5;
+$white: #ffff;
+$smoke-dark: #5F6368;
+$grey: #4D4D4D;
+$black: #000;
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 12.5px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  /* font-size: 16rem; */
+  line-height: 1.5;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-10rem);
+  }
+
+  80% {
+    opacity: 0.5;
+    transform: translateY(-2rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    transform: translateY(2rem);
+  }
+
+  80% {
+    transform: translateY(10rem);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(0);
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10rem);
+  }
+
+  80% {
+    opacity: 0.5;
+    transform: translateY(2rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+
+
+.header {
+  height: 800px;
+  width: 100%;
+  background-color: $blue;
+  background-image: linear-gradient(to right bottom, rgba($dark-blue, 0.850), rgba($dark-blue,0.900)), url(../img/work-desk__dustin-lee.jpg);
+  background-size: cover;
+  background-position: top;
+  position: relative;
+
+ 
+  .notification {
+    position: fixed;
+    display: block;
+    background-color: $smoke-grey;
+    width: 100%;
+    animation-name: fadeIn;
+    z-index: 10;
+    &__content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  
+    @media screen and (max-width: 600px){
+      display: block;
+      padding: 10px;
+    }
+  
+      .content-text {
+        display: inline-block;
+        color: $black;
+        margin-top: 10px;
+        margin-bottom: 10px;
+  
+        p {
+          a {
+            text-decoration: none;
+          }
+        }
+      }
+  
+      .btn-box {
+        background-color: $blue;
+        border-radius: 5px;
+        margin-left: 20px;
+        cursor: pointer;
+        
+  
+        @media screen and (max-width: 600px){
+          margin-left: 0px;
+          width: 60px;
+        }
+  
+        p {
+          font-size: 12px;
+          padding: 10px;
+          color: $smoke-grey;
+        }
+      }
+    }
+  }
+  &__logo-box{
+    position: absolute;
+    top: 80px;
+    left: 30px;
+    @media screen and (max-width: 600px){
+      top: 120px;
+    }
+    .header-logo {
+      height: 30px;
+    }
+  }
+
+  &__text-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+    .heading-top {
+      color: $smoke-grey;
+      text-align: center;
+      .heading-primary--title {
+        font-weight: normal;
+        font-size: 40px;
+      }
+
+      .heading-primary--main {
+        font-size: 42px;
+      }
+
+      .heading-primary--sub {
+        font-weight: 100;
+        font-size: 25px;
+      }
+
+      a {
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      .btn-header-box {
+        &,
+        &:visited,
+        &:link {
+          display: inline-block;
+          margin-top: 50px;
+          padding: 10px;
+          text-transform: uppercase;
+          border-style: solid;
+          text-decoration: none;
+          border-width: 2px;
+          border-color: $smoke-grey;
+          color: $smoke-grey;
+        }
+
+
+        &:hover {
+          border-radius: 4px;
+          background-color: $smoke-grey;
+          text-decoration: none;
+          color: $dark-blue;
+          box-shadow: .5rem 1rem 2rem rgba($black, 0.198);
+          transform: translateY(-2px);
+        }
+
+        &:active {
+          border-radius: 4px;
+          background-color: $smoke-grey;
+          text-decoration: none;
+          color: $dark-blue;
+          box-shadow: .5rem 1rem 2rem rgba($black, 0.198);
+          transform: translateY(0);
+        }
+      }
+    }
+  }
+  
+
+ 
+}
+
+.content {
+  background-color: $smoke-grey;
+  padding: 50px 10px;
+  color: $grey;
+
+  &-header {
+    text-align: center;
+    padding-top: 100px;
+    margin: 0 auto;
+
+    .heading-title {
+      font-weight: normal;
+      font-size: 40px;
+      margin: 20px;
+    }
+
+    .heading-content {
+      font-weight: 300;
+      letter-spacing: 2px;
+    }
+  }
+
+  &-features {
+    margin: 60px 40px;
+    margin-bottom: 80px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    .features-box {
+      width: 300px;
+      height: 150px;
+      border: solid;
+      border-color: $grey;
+      box-shadow: 5px 10px #888888;
+
+      margin: 20px 10px;
+      border-width: 1px;
+      padding: 20px;
+
+      .features-header {
+        display: flex;
+        justify-content: space-between;
+
+        .custom {
+          color: $smoke-dark;
+          display: inline-block;
+          margin-top: 8px;
+        }
+      }
+
+      .features-text {
+        margin-top: 20px;
+      }
+    }
+  }
+}
+
+.footer {
+  background-color: $dark-blue;
+  position: relative;
+  .footer-text {
+    padding: 20px;
+    text-align: center;
+    color: #ffff;
+  }
+
+
+  .letter {
+    background-color: transparentize($color: $blue, $amount: 0.1);
+    color: $smoke-grey;
+    position: absolute;
+    width: 500px;
+    padding: 40px;
+    border-radius: 3px;
+
+    left: 0;
+    bottom: 0;
+
+    
+
+    @media screen and (max-width: 600px){
+      display: block;
+      width: 300px;
+      padding: 20px;
+      transition: none;
+    }
+
+
+    h2 {
+      margin-bottom: 10px;
+    }
+
+    .custome {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+    }
+
+    .form_wrapper {
+      margin-top: 10px;
+      .form_input {
+        width: 300px;
+        border-radius: 2px;
+        border: none;
+        padding: 4px;
+
+        @media screen and (max-width: 600px){
+          display: block;
+          width: 285px;
+          margin-bottom: 8px;
+          padding: 4px 8px;
+        }
+      }
+
+      .btn-input {
+        &,
+        &:link,
+        &:visited {
+          color: inherit;
+          background-color: orange;
+          border: none;
+          border-radius: 3px;
+
+        margin-right: 10px;
+          padding: 4px;
+
+          @media screen and (max-width: 600px){
+            display: block;
+            width: 100%;
+          }
+        }
+
+        &:active {
+          transform: translateY(2px);
+        }
+      }
+    }
+  }
+}
+

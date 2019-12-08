@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <script src="https://use.fontawesome.com/21f98b8da2.js"></script>
+  <script src="https://kit.fontawesome.com/acca67d0da.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <script type="text/javascript">
+        $(document).ready(function(){
+          $(".btn-box").click(function(){
+            $("#notification").slideUp();
+            $('.header__logo-box').css({'top': 30, 'transition': 'all .5s'})
+            var elmnt = document.getElementById("header");
+            elmnt.scrollIntoView()
+          });
+
+          $("#close").click(function(){
+            $('.letter').slideUp(null, function() {
+              $('.letter').css({'opacity': '0', 'transition': 'all 8s'})
+            })
+
+              setTimeout(function(){
+                $('.letter').slideDown('slow', function() {
+                  $('.letter').css({'opacity': '1', 'transition': 'all 8s'})
+                })
+                }, 10000);
+          });
+        });
+    </script>
+  <title>Document</title>
+</head>
+<body>
+    
+  <header class="header" id="header">
+      <div class="notification" id='notification'>
+          <div class="notification__content">
+            <div class="content-text">
+              <p>
+                By accesing and using this website, you acknowledge that you have read and <br/> understand our <a href="#">cookie policy</a>, <a href="#">privcy policy</a>, and our  <a href="#">tearms service.</a>
+              </p>
+            </div>
+            <div class="btn-box"><p>Got it</p></div>
+          </div>
+        </div>
+      <div class="header__logo-box">
+          <img src="img/y-logo-white.png" alt="Logo" class="header-logo">
+      </div>
+      <div class="header__text-box">
+          <div class="heading-top">
+              <h1 class="heading-primary--title">Hello! I’m Helmi Yogantara</h1>
+              <h1 class="heading-primary--main">Consult, Design and Develope Webiste</h1>
+              <h3 class="heading-primary--sub">Have something great in mind?, Fell free to contact me. <br /> I'll help you to make it happen</h3>
+              
+              <a href="" class="btn-header-box">LET'S MAKE CONTACT</a>
+          </div>
+
+      </div>
+  </header>
+  <main>
+    <div class="content">
+      <div class="content-header">
+        <h1 class="heading-title">How Can I Help You ?</h1>
+        <h3 class="heading-content">Our work then targeted, best practice outcomes social innovation sinergy. <br />Venture Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse consequatur, molestiae consequuntur iste, <br /> quisquam ducimus repellendus, ipsum in iure necessitatibus nisi. Ut quas velit deserunt, ratione minus fugiat tempore sed.</h3>
+      </div>
+      <div class="content-features">
+        <div class="features-box">
+          <div class="features-header">
+            <h2>Consult</h2>
+            <i class="far fa-comments fa-lg custom"></i>
+          </div>
+          <div class="features-text">
+              enture Lorem ipsum dolor, sit amet consectetur adipisicsse consequatur, molestiae consequuntur iste, quisquam ducimus repellendus, ipsum in iure necessitatibus nisi. Ut q
+          </div>
+        </div>
+        <div class="features-box">
+            <div class="features-header">
+              <h2>Design</h2>
+              <i class="fas fa-paint-brush fa-lg custom"></i>
+            </div>
+            <div class="features-text">
+                enture Lorem ipsum dolor, sit amet consectetur adipisicsse consequatur, molestiae consequuntur iste, quisquam ducimus repellendus, ipsum in iure necessitatibus nisi. Ut q
+            </div>
+        </div>
+        <div class="features-box">
+              <div class="features-header">
+                <h2>Develope</h2>
+                <i class="fas fa-cubes fa-lg custom"></i>
+              </div>
+              <div class="features-text">
+                  enture Lorem ipsum dolor, sit amet consectetur adipisicsse consequatur, molestiae consequuntur iste, quisquam ducimus repellendus, ipsum in iure necessitatibus nisi. Ut q
+              </div>
+        </div>
+      
+          <div class="features-box">
+            <div class="features-header">
+              <h2>Marketing</h2>
+              <i class="fas fa-bullhorn fa-lg custom"></i>
+            </div>
+            <div class="features-text">
+                enture Lorem ipsum dolor, sit amet consectetur adipisicsse consequatur, molestiae consequuntur iste, quisquam ducimus repellendus, ipsum in iure necessitatibus nisi. Ut q
+            </div>
+          </div>
+          <div class="features-box">
+              <div class="features-header">
+                <h2>Manage</h2>
+                <i class="fas fa-tasks fa-lg custom"></i>
+              </div>
+              <div class="features-text">
+                  enture Lorem ipsum dolor, sit amet consectetur adipisicsse consequatur, molestiae consequuntur iste, quisquam ducimus repellendus, ipsum in iure necessitatibus nisi. Ut q
+              </div>
+          </div>
+          <div class="features-box">
+                <div class="features-header">
+                  <h2>Evolve</h2>
+                  <i class="fas fa-chart-line fa-lg custom"></i>
+                </div>
+                <div class="features-text">
+                    enture Lorem ipsum dolor, sit amet consectetur adipisicsse consequatur, molestiae consequuntur iste, quisquam ducimus repellendus, ipsum in iure necessitatibus nisi. Ut q
+                </div>
+          </div>
+        </div>
+      
+    </div>
+  </main>
+  <footer>
+    <div class="footer">
+      <p class="footer-text">© 2018 Helmi Yogantara. All rights reserved</p>
+      <div class="letter" id='letter'><i class="fas fa-times custome" id="close"></i>
+        
+        <h2>Get Lates update in web technologies</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse consequatur, molestiae consequuntur iste, quisquam ducimus repellendus, ipsum in iure necessitatibus nisi.</p>
+        <div class="form_wrapper">
+            <input type="email" class="form_input" id="email" placeholder="Email address" autocomplete="off">
+            <button class="btn-input">Count me in!</button>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
